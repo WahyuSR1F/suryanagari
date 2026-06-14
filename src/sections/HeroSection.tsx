@@ -84,7 +84,7 @@ const HeroSection = () => {
         className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center"
       >
         <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#FBF9F1]/60 mb-6 font-body">
-          Est. 2025
+          Est. 2026
         </p>
 
         <h1
@@ -98,7 +98,7 @@ const HeroSection = () => {
 
         <p className="text-sm md:text-base text-[#FBF9F1]/70 max-w-lg mb-10 font-body font-light leading-relaxed">
           Perjalanan Sejarah, Budaya, & Spiritual yang Tak Terlupakan di
-          Trowulan, Bekasi
+          Trowulan, Mojokerto
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
