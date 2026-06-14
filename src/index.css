@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #050401;
+    --color-text: #FBF9F1;
+    --color-accent: #A8894B;
+    --color-secondary: #0A0A0A;
+    --color-muted: rgba(251, 249, 241, 0.5);
+
+    --background: 30 33% 2%;
+    --foreground: 45 38% 95%;
+    --card: 0 0% 4%;
+    --card-foreground: 45 38% 95%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 45 38% 95%;
+    --primary: 40 40% 47%;
+    --primary-foreground: 30 33% 2%;
+    --secondary: 0 0% 4%;
+    --secondary-foreground: 45 38% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 45 10% 60%;
+    --accent: 40 40% 47%;
+    --accent-foreground: 30 33% 2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 40% 47%;
+    --input: 0 0% 15%;
+    --ring: 40 40% 47%;
+    --radius: 0.5rem;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+/* Gallery Parallax Grid */
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 0 5%;
+  width: 100%;
+  position: relative;
+}
+
+.column-wrap {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  width: 100%;
+  position: relative;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Add a slight offset to the middle column for a masonry feel */
+.column-wrap:nth-child(2) {
+  margin-top: 4rem;
+}
+
+.gallery-item {
+  width: 100%;
+  padding-bottom: 125%; /* 4:5 aspect ratio */
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #1a1a1a;
+}
+
+.gallery-item__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-item__img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Scroll indicator */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+/* Hide scrollbar for carousel */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Mobile gallery override */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    padding: 0 5%;
+    gap: 1.5rem;
+  }
+  
+  .column-wrap {
+    width: 100%;
+  }
+
+  .column-wrap:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .column {
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    padding-bottom: 80%; /* Shorter aspect ratio for mobile */
+  }
+}
+
+/* Card hover effect */
+.package-card {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(168, 137, 75, 0.2);
+}
+
+.package-card__img {
+  transition: transform 800ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.package-card:hover .package-card__img {
+  transform: translateY(-40px) scale(1.05);
+}
+
+.package-card__overlay {
+  background: linear-gradient(to top, rgba(5,4,1,0.95) 0%, rgba(5,4,1,0.4) 50%, transparent 100%);
+}
+
+/* Phone mockup for QR section */
+@keyframes scan-line {
+  0% { top: 10%; }
+  50% { top: 80%; }
+  100% { top: 10%; }
+}
+
+.qr-scan-line {
+  animation: scan-line 3s ease-in-out infinite;
+}
+
+/* Section fade in */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
