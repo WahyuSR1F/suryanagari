@@ -26,7 +26,7 @@ const features = [
   },
 ]
 
-// Real QR Code SVG — encodes "https://suryanagari.id" (21x21 modules, version 1)
+// Real QR Code SVG — encodes "https://majavent.id" (21x21 modules, version 1)
 // Hand-crafted valid QR pattern for display purposes
 const QR_MODULES = [
   [1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1],
@@ -199,7 +199,7 @@ const QRScanSection = () => {
 
                     {/* App title */}
                     <p className="text-[10px] tracking-[0.25em] text-[#A8894B] font-body uppercase mt-4">
-                      Suryanagari Scanner
+                      Majavent Scanner
                     </p>
 
                     {/* QR Viewfinder */}
@@ -284,7 +284,7 @@ const QRScanSection = () => {
                   Coba Scan
                 </p>
                 <p className="text-sm font-display text-[#FBF9F1] italic mb-1">
-                  QR Demo Suryanagari
+                  QR Demo Majavent
                 </p>
                 <p className="text-xs text-[#FBF9F1]/40 font-body leading-relaxed">
                   Arahkan kamera Anda ke QR ini untuk melihat tampilan pengalaman digital wisata Trowulan.

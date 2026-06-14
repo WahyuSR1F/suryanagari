@@ -58,8 +58,8 @@ const BookingSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const { nama, paket, tanggal, jumlah, catatan } = formData
-    const message = `Halo Suryanagari! Saya ingin booking wisata:%0A%0A*Nama:* ${nama}%0A*Paket:* ${paket}%0A*Tanggal:* ${tanggal}%0A*Jumlah Orang:* ${jumlah}%0A*Catatan:* ${catatan || '-'}%0A%0ATerima kasih!`
-    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank')
+    const message = `Halo Majavent! Saya ingin booking wisata:%0A%0A*Nama:* ${nama}%0A*Paket:* ${paket}%0A*Tanggal:* ${tanggal}%0A*Jumlah Orang:* ${jumlah}%0A*Catatan:* ${catatan || '-'}%0A%0ATerima kasih!`
+    window.open(`https://wa.me/6287723319080?text=${message}`, '_blank')
   }
 
   return (
@@ -129,7 +129,7 @@ const BookingSection = () => {
                     value="Suryanagari"
                     className="text-[#FBF9F1] focus:bg-[#A8894B]/20 focus:text-[#FBF9F1]"
                   >
-                    Suryanagari (08.00-15.00)
+                    Paket Suryanagari (08.00-15.00)
                   </SelectItem>
                   <SelectItem
                     value="Sandyakala"

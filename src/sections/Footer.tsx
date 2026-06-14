@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react'
+import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react'
 
 const Footer = () => {
   const scrollTo = (id: string) => {
@@ -21,7 +21,7 @@ const Footer = () => {
             className="font-display text-[#FBF9F1] italic"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
           >
-            SURYANAGARI
+            MAJAVENT
           </h2>
           <p className="text-sm text-[#FBF9F1]/40 font-body font-light mt-3 tracking-wider">
             WISATA TROWULAN — MAJAPAHIT EXPERIENCE
@@ -80,19 +80,19 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-[#A8894B] flex-shrink-0" />
                 <a
-                  href="tel:+6281234567890"
+                  href="tel:+6287723319080"
                   className="text-sm text-[#FBF9F1]/50 font-body font-light hover:text-[#A8894B] transition-colors duration-300"
                 >
-                  +62 812-3456-7890
+                  +62 877-2331-9080
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-[#A8894B] flex-shrink-0" />
                 <a
-                  href="mailto:info@suryanagari.com"
+                  href="mailto:majaventtour@gmail.com"
                   className="text-sm text-[#FBF9F1]/50 font-body font-light hover:text-[#A8894B] transition-colors duration-300"
                 >
-                  info@suryanagari.com
+                  majaventtour@gmail.com
                 </a>
               </li>
             </ul>
@@ -105,22 +105,47 @@ const Footer = () => {
             </h3>
             <div className="flex items-center gap-4 mb-8">
               <a
-                href="#"
+                href="https://www.instagram.com/majavent.culturetour"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-[#A8894B]/20 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/1LsUWJcFd9/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-[#A8894B]/20 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
               >
                 <Facebook size={18} />
               </a>
               <a
-                href="#"
+                href="https://x.com/majavent"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-[#A8894B]/20 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
               >
-                <Youtube size={18} />
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@majavent.culturetour"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-[#A8894B]/20 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
               </a>
             </div>
 
@@ -143,7 +168,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-[#A8894B]/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#FBF9F1]/30 font-body">
-            &copy; 2026 Suryanagari. Wisata Trowulan. All rights reserved.
+            &copy; 2026 Majavent. Wisata Trowulan. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

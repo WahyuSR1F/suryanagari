@@ -25,37 +25,37 @@ const itineraries: PackageItinerary[] = [
       {
         time: '08.00',
         activity: 'Berkumpul di Graha Pawitra',
-        description:
-          'Peserta berkumpul di Graha Pawitra untuk briefing dan sarapan pagi tradisional.',
+        description: 'Titik kumpul peserta dan briefing awal perjalanan.',
       },
       {
         time: '09.00',
-        activity: 'Eksplorasi Candi Tikus',
-        description:
-          'Mengunjungi Candi Tikus yang unik dengan arsitektur bawah tanahnya.',
+        activity: 'Eksplorasi Candi Brahu',
+        description: 'Mengunjungi dan mendengarkan sejarah Candi Brahu.',
       },
       {
-        time: '10.30',
-        activity: 'Tur Museum Trowulan',
-        description:
-          'Melihat koleksi artefak Kerajaan Majapahit dengan pemandu profesional.',
+        time: '10.00',
+        activity: 'Kunjungan Candi Kedaton',
+        description: 'Melihat langsung sisa peninggalan Candi Kedaton peninggalan Majapahit.',
       },
       {
-        time: '12.00',
-        activity: 'Makan Siang Tradisional',
-        description: 'Menikmati hidangan khas Jawa di restoran lokal.',
+        time: '11.00',
+        activity: 'Makan Siang',
+        description: 'Menikmati kuliner legendaris Cak Mat Sambel Wader.',
+      },
+      {
+        time: '12.30',
+        activity: 'Kampung Batik Trowulan',
+        description: 'Edukasi dan melihat proses pembuatan batik khas Trowulan.',
       },
       {
         time: '13.30',
-        activity: 'Kolam Segaran & Bajang Ratu',
-        description:
-          'Mengunjungi kolam purba dan gapura Bajang Ratu yang megah.',
+        activity: 'Sentra Pembuat Patung',
+        description: 'Melihat langsung keterampilan pengrajin batu dan patung.',
       },
       {
-        time: '15.00',
-        activity: 'Wringin Lawang & Meditasi',
-        description:
-          'Sesi meditasi singkat di Wringin Lawang sebelum perjalanan pulang.',
+        time: '14.30',
+        activity: 'Perjalanan Pulang',
+        description: 'Kembali ke Graha Pawitra atau rumah masing-masing.',
       },
     ],
   },
@@ -66,38 +66,32 @@ const itineraries: PackageItinerary[] = [
       {
         time: '15.00',
         activity: 'Berkumpul di Graha Pawitra',
-        description:
-          'Peserta berkumpul untuk briefing sore dan welcome drink.',
+        description: 'Titik kumpul awal dan persiapan wisata sore.',
       },
       {
         time: '16.00',
-        activity: 'Eksplorasi Wringin Lawang',
-        description:
-          'Menikmati suasana sore di gapura terbesar Trowulan.',
+        activity: 'Kampung Batik',
+        description: 'Eksplorasi sore di sentra kerajinan batik lokal.',
       },
       {
-        time: '17.30',
-        activity: 'Sunset di Bajang Ratu',
-        description:
-          'Menyaksikan matahari terbenam di Candi Bajang Ratu.',
+        time: '17.00',
+        activity: 'Candi Tribuana Tungga Dewi',
+        description: 'Kunjungan sore menikmati suasana tenang di area candi.',
       },
       {
         time: '18.30',
-        activity: 'Storytelling Sejarah',
-        description:
-          'Duduk bersama mendengarkan kisah-kisah Majapahit.',
+        activity: 'Makan Malam',
+        description: 'Istirahat dan menikmati kuliner Cak Mat Sambel Wader.',
       },
       {
-        time: '19.30',
-        activity: 'Makan Malam & Lampion',
-        description:
-          'Jamuan malam dengan melepas lampion ke udara.',
+        time: '19.15',
+        activity: 'Pementasan Candi Bajang Ratu',
+        description: 'Menyaksikan pementasan spesial dengan tata cahaya (lighting) yang indah.',
       },
       {
-        time: '20.30',
-        activity: 'Night Tour Candi Tikus',
-        description:
-          'Pengalaman unik mengunjungi Candi Tikus di malam hari.',
+        time: '20.45',
+        activity: 'Perjalanan Pulang',
+        description: 'Kembali ke penginapan Graha Pawitra / selesai.',
       },
     ],
   },
@@ -107,39 +101,48 @@ const itineraries: PackageItinerary[] = [
     items: [
       {
         time: '15.00',
-        activity: 'Check-in Graha Pawitra',
-        description: 'Tiba dan check-in di Graha Pawitra, welcome ceremony.',
+        activity: 'Penginapan Graha Pawitra',
+        description: 'Titik kumpul, check-in, dan persiapan acara.',
       },
       {
-        time: '16.00',
-        activity: 'Tur Kompleks Candi',
-        description: 'Eksplorasi seluruh kompleks candi dengan pemandu.',
+        time: '15.30',
+        activity: 'Kawasan Jatisumber',
+        description: 'Eksplorasi sore dan menikmati suasana di kawasan Jatisumber.',
       },
       {
-        time: '18.00',
-        activity: 'Jamuan Malam Kerajaan',
-        description: 'Makan malam dengan hidangan ala kerajaan Majapahit.',
+        time: '18.30',
+        activity: 'Rumah Penduduk & Sesaji',
+        description: 'Berkunjung ke rumah penduduk dan berpartisipasi menyiapkan sesaji.',
+      },
+      {
+        time: '19.00',
+        activity: 'Menuju Candi Tengah Sawah',
+        description: 'Perjalanan menuju candi di tengah sawah dan mulai mengikuti ritual.',
       },
       {
         time: '20.00',
-        activity: 'Ritual Purnama',
-        description:
-          'Mengikuti ritual purnama yang dipimpin oleh pemangku adat.',
+        activity: 'Ritual Bulan Purnama',
+        description: 'Puncak acara mengikuti rangkaian ritual bulan purnama yang sakral hingga selesai.',
       },
       {
-        time: '22.00',
-        activity: 'Stargazing',
-        description: 'Mengamati bintang dengan pemandu astronomi lokal.',
+        time: '00.00',
+        activity: 'Kembali ke Penginapan',
+        description: 'Perjalanan kembali ke penginapan untuk beristirahat malam.',
       },
       {
-        time: '06.00',
-        activity: 'Sunrise Meditation',
-        description: 'Meditasi pagi eksklusif menyambut fajar.',
+        time: '06.30',
+        activity: 'Yoga di Wringin Lawang',
+        description: 'Sesi relaksasi yoga pagi yang menenangkan di area Wringin Lawang.',
       },
       {
-        time: '08.00',
-        activity: 'Sarapan & Check-out',
-        description: 'Sarapan pagi tradisional dan proses check-out.',
+        time: '07.30',
+        activity: 'Merangkai Bunga',
+        description: 'Aktivitas belajar merangkai bunga yang estetik di Wringin Lawang.',
+      },
+      {
+        time: '08.30',
+        activity: 'Perjalanan Pulang',
+        description: 'Persiapan selesai dan kembali ke rumah masing-masing.',
       },
     ],
   },

@@ -52,7 +52,7 @@ const Navigation = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="font-body text-base md:text-lg tracking-[0.3em] font-medium text-[#FBF9F1] hover:text-[#A8894B] transition-colors duration-300"
         >
-          SURYANAGARI
+          MAJAVENT
         </button>
 
         {/* Right nav links - desktop */}

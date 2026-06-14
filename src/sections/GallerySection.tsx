@@ -34,38 +34,42 @@ const GallerySection = () => {
         },
       })
 
-      // Parallax columns
-      const columnWraps = columnsRef.current?.querySelectorAll('.column-wrap')
-      if (!columnWraps) return
+      // Parallax columns - Desktop only
+      let mm = gsap.matchMedia()
+      
+      mm.add('(min-width: 768px)', () => {
+        const columnWraps = columnsRef.current?.querySelectorAll('.column-wrap')
+        if (!columnWraps) return
 
-      const firstColumn = columnWraps[0]?.querySelector('.column')
-      const thirdColumn = columnWraps[2]?.querySelector('.column')
+        const firstColumn = columnWraps[0]?.querySelector('.column')
+        const thirdColumn = columnWraps[2]?.querySelector('.column')
 
-      if (firstColumn) {
-        gsap.to(firstColumn, {
-          y: -100, // Gentle parallax
-          ease: 'none',
-          scrollTrigger: {
-            trigger: columnsRef.current, // Use the parent container as trigger
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          },
-        })
-      }
+        if (firstColumn) {
+          gsap.to(firstColumn, {
+            y: -100, // Gentle parallax
+            ease: 'none',
+            scrollTrigger: {
+              trigger: columnsRef.current,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          })
+        }
 
-      if (thirdColumn) {
-        gsap.to(thirdColumn, {
-          y: -100, // Match the first column
-          ease: 'none',
-          scrollTrigger: {
-            trigger: columnsRef.current,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          },
-        })
-      }
+        if (thirdColumn) {
+          gsap.to(thirdColumn, {
+            y: -100, // Match the first column
+            ease: 'none',
+            scrollTrigger: {
+              trigger: columnsRef.current,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          })
+        }
+      })
     }, sectionRef)
 
     return () => ctx.revert()

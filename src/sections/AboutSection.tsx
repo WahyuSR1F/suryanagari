@@ -21,6 +21,28 @@ const AboutSection = () => {
           toggleActions: 'play none none none',
         },
       })
+
+      // Counter animation
+      const counters = document.querySelectorAll('.stat-counter')
+      counters.forEach((counter) => {
+        const target = parseFloat(counter.getAttribute('data-target') || '0')
+        const suffix = counter.getAttribute('data-suffix') || ''
+        const obj = { val: 0 }
+
+        gsap.to(obj, {
+          val: target,
+          duration: 2.5,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: counter,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          onUpdate: () => {
+            counter.innerHTML = Math.round(obj.val) + suffix
+          },
+        })
+      })
     }, sectionRef)
 
     return () => ctx.revert()
@@ -50,13 +72,13 @@ const AboutSection = () => {
 
         <p className="text-sm md:text-base text-[#FBF9F1]/80 font-body font-light leading-[1.8] mb-6">
           Wisata Trowulan merupakan salah satu objek wisata rohani, sejarah, dan
-          budaya yang berada di Trowulan, Cibarusah, Bekasi. Trowulan juga
-          memiliki tujuh destinasi wisata yang siap untuk dieksplorasi bersama
+          budaya yang berada di Trowulan, Mojokerto, Jawa Timur. Trowulan juga
+          memiliki sembilan destinasi wisata yang siap untuk dieksplorasi bersama
           keluarga, sahabat, dan rekan-rekan.
         </p>
 
         <p className="text-sm md:text-base text-[#FBF9F1]/60 font-body font-light leading-[1.8]">
-          Kami menawarkan tiga paket wisata unik — Suryanagari, Sandyakala, dan
+          Kami menawarkan tiga paket wisata unik — Paket Suryanagari, Sandyakala, dan
           Candramawa — masing-masing dirancang untuk memberikan pengalaman
           mendalam tentang kejayaan Kerajaan Majapahit, mulai dari matahari
           terbit hingga ritual purnama yang sakral.
@@ -65,10 +87,11 @@ const AboutSection = () => {
         <div className="mt-16 grid grid-cols-3 gap-8">
           <div className="text-center">
             <p
-              className="font-display text-[#A8894B] mb-2"
+              className="stat-counter font-display text-[#A8894B] mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+              data-target="9"
             >
-              7
+              0
             </p>
             <p className="text-xs tracking-[0.15em] uppercase text-[#FBF9F1]/50 font-body">
               Destinasi
@@ -76,10 +99,11 @@ const AboutSection = () => {
           </div>
           <div className="text-center">
             <p
-              className="font-display text-[#A8894B] mb-2"
+              className="stat-counter font-display text-[#A8894B] mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+              data-target="3"
             >
-              3
+              0
             </p>
             <p className="text-xs tracking-[0.15em] uppercase text-[#FBF9F1]/50 font-body">
               Paket Wisata
@@ -87,10 +111,12 @@ const AboutSection = () => {
           </div>
           <div className="text-center">
             <p
-              className="font-display text-[#A8894B] mb-2"
+              className="stat-counter font-display text-[#A8894B] mb-2"
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
+              data-target="1"
+              data-suffix="K+"
             >
-              1K+
+              0K+
             </p>
             <p className="text-xs tracking-[0.15em] uppercase text-[#FBF9F1]/50 font-body">
               Pengunjung

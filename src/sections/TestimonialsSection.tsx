@@ -11,7 +11,7 @@ const testimonials = [
     name: 'Rina Wulandari',
     role: 'Travel Blogger',
     quote:
-      'Pengalaman yang sangat mendalam. Suryanagari membawa saya menyusuri jejak sejarah Majapahit dengan cara yang begitu hidup dan autentik. Pemandu yang berpengetahuan luas membuat setiap destinasi terasa istimewa.',
+      'Pengalaman yang sangat mendalam. Majavent membawa saya menyusuri jejak sejarah Majapahit dengan cara yang begitu hidup dan autentik. Pemandu yang berpengetahuan luas membuat setiap destinasi terasa istimewa.',
   },
   {
     image: '/images/testimonial-2.jpg',
