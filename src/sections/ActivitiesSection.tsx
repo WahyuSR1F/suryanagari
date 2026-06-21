@@ -64,30 +64,30 @@ const ActivitiesSection = () => {
     <section
       ref={sectionRef}
       id="kegiatan"
-      className="relative py-24 md:py-40"
-      style={{ backgroundColor: '#050401' }}
+      className="relative py-24 md:py-36"
+      style={{ backgroundColor: '#F5EFE4' }}
     >
-      <div className="max-w-[1440px] mx-auto">
-        {/* Header — padded */}
+      <div className="max-w-[1200px] mx-auto">
+        {/* Header */}
         <div className="activities-header px-[5%] mb-10 md:mb-14">
-          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[rgba(251,249,241,0.5)] mb-6 font-body italic">
+          <p className="font-accent text-sm md:text-base italic text-[#7A3218]/70 mb-5 tracking-wide">
             Aktivitas
           </p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2
-              className="font-display text-[#FBF9F1] leading-[1.2]"
+              className="font-display text-[#2C1A0E] leading-[1.2]"
               style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
             >
               Kegiatan Wisata
             </h2>
-            <p className="text-sm text-[#FBF9F1]/50 font-body font-light max-w-md">
+            <p className="text-sm text-[#5C3A22]/70 font-body font-light max-w-md">
               Berbagai aktivitas menarik yang bisa Anda lakukan selama
               berwisata di Trowulan.
             </p>
           </div>
         </div>
 
-        {/* Cards — stack vertikal di mobile, baris di desktop */}
+        {/* Cards */}
         <div
           ref={carouselRef}
           className="grid grid-cols-1 md:flex md:flex-row gap-4 md:gap-6 md:overflow-x-auto md:hide-scrollbar md:pb-4 px-[5%]"
@@ -110,27 +110,27 @@ const ActivitiesSection = () => {
                 />
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050401] via-[#050401]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1A0E]/90 via-[#2C1A0E]/25 to-transparent" />
 
                 {/* Index number */}
                 <div className="absolute top-4 left-5">
-                  <span className="text-5xl font-display text-[#FBF9F1]/10 italic">
+                  <span className="text-5xl font-display text-white/10">
                     {activity.index}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                  <h3 className="text-lg md:text-xl font-display text-[#FBF9F1] italic mb-1.5">
+                  <h3 className="text-lg md:text-xl font-display text-white mb-1.5">
                     {activity.title}
                   </h3>
-                  <p className="text-sm text-[#FBF9F1]/60 font-body font-light leading-relaxed">
+                  <p className="text-sm text-white/60 font-body font-light leading-relaxed">
                     {activity.description}
                   </p>
                 </div>
 
-                {/* Gold border on hover */}
-                <div className="absolute inset-0 rounded-xl border border-[#A8894B]/0 group-hover:border-[#A8894B]/30 transition-colors duration-500 pointer-events-none" />
+                {/* Hover border */}
+                <div className="absolute inset-0 rounded-xl border border-[#7A3218]/0 group-hover:border-[#7A3218]/30 transition-colors duration-500 pointer-events-none" />
               </div>
             </div>
           ))}

@@ -5,7 +5,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 60)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -13,74 +13,72 @@ const Navigation = () => {
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
+
+  const links = [
+    { label: 'Tentang', id: 'tentang' },
+    { label: 'Paket', id: 'paket' },
+    { label: 'Galeri', id: 'galeri' },
+    { label: 'Kegiatan', id: 'kegiatan' },
+  ]
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-[#050401]/90 backdrop-blur-md' : 'bg-transparent'
+        scrolled
+          ? 'bg-[#FAF7F2] shadow-[0_1px_0_0_#EDE4D6]'
+          : 'bg-gradient-to-b from-black/40 to-transparent'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-[5%] py-5 flex items-center justify-between">
-        {/* Left nav links - desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={() => scrollTo('tentang')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            Tentang
-          </button>
-          <button
-            onClick={() => scrollTo('galeri')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            Galeri
-          </button>
-          <button
-            onClick={() => scrollTo('paket')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            Paket
-          </button>
-        </div>
-
-        {/* Center logo */}
+      <div className="max-w-[1200px] mx-auto px-[5%] py-3 flex items-center justify-between">
+        {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="font-body text-base md:text-lg tracking-[0.3em] font-medium text-[#FBF9F1] hover:text-[#A8894B] transition-colors duration-300"
+          className={`font-display text-sm md:text-base tracking-[0.25em] font-medium transition-colors duration-300 ${
+            scrolled ? 'text-[#2C1A0E] hover:text-[#7A3218]' : 'text-white hover:text-white/80'
+          }`}
         >
           MAJAVENT
         </button>
 
-        {/* Right nav links - desktop */}
+        {/* Center links - desktop */}
         <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={() => scrollTo('qr-scan')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            QR Experience
-          </button>
-          <button
-            onClick={() => scrollTo('kegiatan')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            Kegiatan
-          </button>
-          <button
-            onClick={() => scrollTo('booking')}
-            className="text-xs tracking-[0.2em] uppercase text-[#FBF9F1]/60 hover:text-[#A8894B] transition-colors duration-300"
-          >
-            Booking
-          </button>
+          {links.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
+              className={`text-[11px] tracking-[0.18em] uppercase font-body transition-colors duration-300 ${
+                scrolled
+                  ? 'text-[#2C1A0E]/70 hover:text-[#7A3218]'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
-        {/* Mobile menu button */}
+        {/* Booking button - desktop */}
         <button
           onClick={() => scrollTo('booking')}
-          className="md:hidden text-xs tracking-[0.15em] uppercase text-[#A8894B] border border-[#A8894B]/40 px-4 py-2 hover:bg-[#A8894B]/10 transition-all duration-300"
+          className={`hidden md:inline-flex text-[11px] tracking-[0.15em] uppercase font-body font-medium px-5 py-2 rounded-lg transition-colors duration-300 ${
+            scrolled
+              ? 'text-white bg-[#7A3218] hover:bg-[#5e2612]'
+              : 'text-white bg-[#7A3218]/80 hover:bg-[#7A3218]'
+          }`}
+        >
+          Booking
+        </button>
+
+        {/* Mobile booking button */}
+        <button
+          onClick={() => scrollTo('booking')}
+          className={`md:hidden text-[11px] tracking-[0.15em] uppercase font-body font-medium px-4 py-1.5 rounded-lg transition-colors duration-300 ${
+            scrolled
+              ? 'text-white bg-[#7A3218] hover:bg-[#5e2612]'
+              : 'text-white bg-[#7A3218]/80 hover:bg-[#7A3218]'
+          }`}
         >
           Booking
         </button>

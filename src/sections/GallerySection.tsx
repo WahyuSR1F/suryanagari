@@ -94,13 +94,13 @@ const GallerySection = () => {
     <section
       ref={sectionRef}
       id="galeri"
-      className="relative py-24 md:py-40 overflow-hidden"
-      style={{ backgroundColor: '#050401' }}
+      className="relative py-24 md:py-36 overflow-hidden"
+      style={{ backgroundColor: '#F5EFE4' }}
     >
       {/* Heading */}
       <div ref={headingRef} className="text-center px-[5%] mb-16 md:mb-24">
         <h2
-          className="font-display text-[#FBF9F1] leading-[1.2]"
+          className="font-display text-[#2C1A0E] leading-[1.2]"
           style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
         >
           Temukan Pesona Trowulan
@@ -185,17 +185,17 @@ const GallerySection = () => {
       {/* Lightbox */}
       {lightbox !== null && (
         <div
-          className="fixed inset-0 z-[100] bg-[#050401]/95 flex items-center justify-center cursor-pointer"
+          className="fixed inset-0 z-[100] bg-[#2C1A0E]/95 flex items-center justify-center cursor-pointer"
           onClick={() => setLightbox(null)}
         >
           <button
-            className="absolute top-6 right-6 text-[#FBF9F1]/70 hover:text-[#FBF9F1] text-4xl font-light transition-colors"
+            className="absolute top-6 right-6 text-white/70 hover:text-white text-4xl font-light transition-colors"
             onClick={() => setLightbox(null)}
           >
             &times;
           </button>
           <button
-            className="absolute left-4 md:left-8 text-[#FBF9F1]/50 hover:text-[#FBF9F1] text-3xl transition-colors"
+            className="absolute left-4 md:left-8 text-white/50 hover:text-white text-3xl transition-colors"
             onClick={(e) => {
               e.stopPropagation()
               setLightbox(lightbox === 0 ? galleryImages.length - 1 : lightbox - 1)
@@ -204,7 +204,7 @@ const GallerySection = () => {
             &#8249;
           </button>
           <button
-            className="absolute right-4 md:right-8 text-[#FBF9F1]/50 hover:text-[#FBF9F1] text-3xl transition-colors"
+            className="absolute right-4 md:right-8 text-white/50 hover:text-white text-3xl transition-colors"
             onClick={(e) => {
               e.stopPropagation()
               setLightbox(lightbox === galleryImages.length - 1 ? 0 : lightbox + 1)
@@ -218,7 +218,7 @@ const GallerySection = () => {
             className="max-w-[90vw] max-h-[85vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
-          <p className="absolute bottom-6 text-sm text-[#FBF9F1]/60 font-body tracking-wider">
+          <p className="absolute bottom-6 text-sm text-white/60 font-body tracking-wider">
             {lightbox + 1} / {galleryImages.length} — {galleryImages[lightbox].alt}
           </p>
         </div>

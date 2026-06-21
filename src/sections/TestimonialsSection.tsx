@@ -61,17 +61,17 @@ const TestimonialsSection = () => {
     <section
       ref={sectionRef}
       id="testimoni"
-      className="relative py-24 md:py-40"
-      style={{ backgroundColor: '#0A0A0A' }}
+      className="relative py-24 md:py-36"
+      style={{ backgroundColor: '#EDE4D6' }}
     >
       <div className="max-w-[1000px] mx-auto px-[5%]">
         {/* Header */}
-        <div className="testimonials-header text-center mb-16 md:mb-20">
-          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[rgba(251,249,241,0.5)] mb-6 font-body italic">
+        <div className="testimonials-header text-center mb-14 md:mb-18">
+          <p className="font-accent text-sm md:text-base italic text-[#7A3218]/70 mb-5 tracking-wide">
             Testimoni
           </p>
           <h2
-            className="font-display text-[#FBF9F1] leading-[1.2]"
+            className="font-display text-[#2C1A0E] leading-[1.2]"
             style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
           >
             Apa Kata Mereka
@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
         <div className="relative">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             {/* Image */}
-            <div className="flex-shrink-0 w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-[#A8894B]/30">
+            <div className="flex-shrink-0 w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-[#7A3218]/20">
               <img
                 src={t.image}
                 alt={t.name}
@@ -94,16 +94,16 @@ const TestimonialsSection = () => {
             <div className="flex-1 text-center md:text-left">
               <Quote
                 size={32}
-                className="text-[#A8894B]/30 mb-4 mx-auto md:mx-0"
+                className="text-[#7A3218]/20 mb-4 mx-auto md:mx-0"
               />
               <p
                 key={current}
-                className="text-base md:text-lg text-[#FBF9F1]/80 font-body font-light leading-[1.8] mb-6 italic"
+                className="text-base md:text-lg text-[#5C3A22] font-body font-light leading-[1.8] mb-6 italic"
               >
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <p className="text-base font-display text-[#FBF9F1]">{t.name}</p>
-              <p className="text-sm text-[#A8894B] font-body">{t.role}</p>
+              <p className="text-base font-display text-[#2C1A0E]">{t.name}</p>
+              <p className="text-sm text-[#7A3218] font-body">{t.role}</p>
             </div>
           </div>
 
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
           <div className="flex items-center justify-center md:justify-start gap-4 mt-10">
             <button
               onClick={prev}
-              className="w-10 h-10 rounded-full border border-[#A8894B]/30 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
+              className="w-10 h-10 rounded-full border border-[#7A3218]/25 flex items-center justify-center text-[#5C3A22]/60 hover:text-[#7A3218] hover:border-[#7A3218]/50 transition-all duration-300"
             >
               <ChevronLeft size={18} />
             </button>
@@ -122,10 +122,10 @@ const TestimonialsSection = () => {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-300 ${
                     i === current
-                      ? 'bg-[#A8894B] w-6'
-                      : 'bg-[#FBF9F1]/20 hover:bg-[#FBF9F1]/40'
+                      ? 'bg-[#7A3218] w-6'
+                      : 'bg-[#5C3A22]/25 hover:bg-[#5C3A22]/40 w-2'
                   }`}
                 />
               ))}
@@ -133,7 +133,7 @@ const TestimonialsSection = () => {
 
             <button
               onClick={next}
-              className="w-10 h-10 rounded-full border border-[#A8894B]/30 flex items-center justify-center text-[#FBF9F1]/50 hover:text-[#A8894B] hover:border-[#A8894B] transition-all duration-300"
+              className="w-10 h-10 rounded-full border border-[#7A3218]/25 flex items-center justify-center text-[#5C3A22]/60 hover:text-[#7A3218] hover:border-[#7A3218]/50 transition-all duration-300"
             >
               <ChevronRight size={18} />
             </button>

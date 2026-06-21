@@ -12,7 +12,6 @@ const HeroSection = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Background parallax
       gsap.to(bgRef.current, {
         yPercent: 30,
         ease: 'none',
@@ -24,7 +23,6 @@ const HeroSection = () => {
         },
       })
 
-      // Text fade out on scroll
       gsap.to(textRef.current, {
         yPercent: -50,
         opacity: 0,
@@ -41,13 +39,8 @@ const HeroSection = () => {
     return () => ctx.revert()
   }, [])
 
-  const scrollToPackages = () => {
-    const el = document.getElementById('paket')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const scrollToAbout = () => {
-    const el = document.getElementById('tentang')
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -68,12 +61,12 @@ const HeroSection = () => {
           alt="Candi Bajang Ratu Trowulan"
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay */}
+        {/* Dark overlay — softer */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse at center, rgba(5,4,1,0.3) 0%, rgba(5,4,1,0.6) 70%, rgba(5,4,1,0.9) 100%)',
+              'radial-gradient(ellipse at center, rgba(44,26,14,0.25) 0%, rgba(44,26,14,0.55) 65%, rgba(44,26,14,0.85) 100%)',
           }}
         />
       </div>
@@ -81,36 +74,34 @@ const HeroSection = () => {
       {/* Content */}
       <div
         ref={textRef}
-        className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center"
+        className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center max-w-2xl mx-auto"
       >
-        <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[#FBF9F1]/60 mb-6 font-body">
-          Est. 2026
+        <p className="font-accent text-sm md:text-base italic text-white/50 mb-5 tracking-wider">
+          Est. 2026 — Trowulan, Mojokerto
         </p>
 
         <h1
-          className="font-display text-[#FBF9F1] leading-[1.1] mb-6"
-          style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)' }}
+          className="font-display text-white leading-[1.15] mb-5"
+          style={{ fontSize: 'clamp(2.2rem, 7vw, 4.5rem)' }}
         >
-          Rasakan Keagungan
-          <br />
-          Majapahit
+          Rasakan Keagungan Majapahit
         </h1>
 
-        <p className="text-sm md:text-base text-[#FBF9F1]/70 max-w-lg mb-10 font-body font-light leading-relaxed">
-          Perjalanan Sejarah, Budaya, & Spiritual yang Tak Terlupakan di
-          Trowulan, Mojokerto
+        <p className="text-sm md:text-[15px] text-white/65 font-body font-light leading-relaxed mb-9 max-w-md">
+          Perjalanan sejarah, budaya, dan spiritual yang tak terlupakan di
+          jantung Kerajaan Majapahit.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-3">
           <button
-            onClick={scrollToPackages}
-            className="px-8 py-3 bg-[#A8894B] text-[#050401] text-sm tracking-[0.15em] uppercase font-body font-medium hover:bg-[#FBF9F1] transition-colors duration-500"
+            onClick={() => scrollTo('paket')}
+            className="px-7 py-2.5 bg-[#7A3218] text-white text-sm tracking-wider uppercase font-body font-medium rounded-lg hover:bg-[#5e2612] transition-colors duration-400"
           >
             Lihat Paket Wisata
           </button>
           <button
-            onClick={scrollToAbout}
-            className="px-8 py-3 border border-[#FBF9F1]/30 text-[#FBF9F1] text-sm tracking-[0.15em] uppercase font-body hover:border-[#A8894B] hover:text-[#A8894B] transition-all duration-500"
+            onClick={() => scrollTo('tentang')}
+            className="px-7 py-2.5 border border-white/30 text-white text-sm tracking-wider uppercase font-body rounded-lg hover:border-white/60 hover:bg-white/5 transition-all duration-400"
           >
             Jelajahi
           </button>
@@ -119,10 +110,10 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator text-[#FBF9F1]/50 hover:text-[#A8894B] transition-colors duration-300"
+        onClick={() => scrollTo('tentang')}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator text-white/40 hover:text-white/70 transition-colors duration-300"
       >
-        <ChevronDown size={28} />
+        <ChevronDown size={26} />
       </button>
     </section>
   )

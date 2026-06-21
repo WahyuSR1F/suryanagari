@@ -44,7 +44,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative" style={{ backgroundColor: '#050401' }}>
+    <div className="relative" style={{ backgroundColor: '#F5EFE4' }}>
       <Navigation />
       <HeroSection />
       <AboutSection />

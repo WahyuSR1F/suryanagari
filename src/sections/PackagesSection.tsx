@@ -130,22 +130,22 @@ const PackagesSection = () => {
     <section
       ref={sectionRef}
       id="paket"
-      className="relative py-24 md:py-40"
-      style={{ backgroundColor: '#050401' }}
+      className="relative py-24 md:py-36"
+      style={{ backgroundColor: '#F5EFE4' }}
     >
-      <div className="max-w-[1440px] mx-auto px-[5%]">
+      <div className="max-w-[1200px] mx-auto px-[5%]">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[rgba(251,249,241,0.5)] mb-6 font-body italic">
+        <div className="text-center mb-14 md:mb-20">
+          <p className="font-accent text-sm md:text-base italic text-[#7A3218]/70 mb-5 tracking-wide">
             Pilihan Paket
           </p>
           <h2
-            className="font-display text-[#FBF9F1] leading-[1.2] mb-6"
+            className="font-display text-[#2C1A0E] leading-[1.2] mb-5"
             style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
           >
             Katalog Paket Wisata
           </h2>
-          <p className="text-sm text-[#FBF9F1]/50 font-body font-light max-w-lg mx-auto">
+          <p className="text-sm text-[#5C3A22]/70 font-body font-light max-w-lg mx-auto">
             Pilih pengalaman yang sesuai dengan keinginan Anda. Setiap paket
             dirancang untuk memberikan momen tak terlupakan.
           </p>
@@ -154,12 +154,12 @@ const PackagesSection = () => {
         {/* Cards Grid */}
         <div
           ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7"
         >
           {packages.map((pkg) => (
             <div
               key={pkg.id}
-              className="package-card relative h-[500px] md:h-[600px] cursor-pointer group"
+              className="package-card relative h-[540px] md:h-[620px] cursor-pointer group rounded-xl overflow-hidden"
               onClick={() => setSelectedPackage(pkg)}
             >
               {/* Image */}
@@ -175,41 +175,38 @@ const PackagesSection = () => {
               <div className="package-card__overlay absolute inset-0" />
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 z-10">
-                <div className="flex items-center gap-2 mb-3">
-                  <Clock size={14} className="text-[#A8894B]" />
-                  <span className="text-xs text-[#FBF9F1]/70 font-body">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-7 z-10">
+                <div className="flex items-center gap-2 mb-2.5">
+                  <Clock size={13} className="text-[#EDE4D6]/80" />
+                  <span className="text-xs text-white/65 font-body">
                     {pkg.time}
                   </span>
                 </div>
 
                 <h3
-                  className="font-display text-[#FBF9F1] mb-3"
-                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)' }}
+                  className="font-display text-white mb-2"
+                  style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2rem)' }}
                 >
                   {pkg.name}
                 </h3>
 
-                <p className="text-sm text-[#FBF9F1]/60 font-body font-light mb-4 line-clamp-2">
+                <p className="text-[13px] text-white/60 font-body font-light mb-4 leading-relaxed line-clamp-3">
                   {pkg.description}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-display text-[#A8894B]">
+                  <span className="text-lg font-display text-[#EDE4D6]">
                     {pkg.price}
-                    <span className="text-xs text-[#FBF9F1]/40 font-body ml-1">
+                    <span className="text-xs text-white/45 font-body ml-1">
                       /orang
                     </span>
                   </span>
-                  <div className="flex items-center gap-1 text-[#A8894B] text-xs font-body tracking-wider group-hover:translate-x-1 transition-transform duration-300">
+                  <div className="flex items-center gap-1 text-[#EDE4D6] text-xs font-body tracking-wider group-hover:translate-x-1 transition-transform duration-300">
                     <span>DETAIL</span>
                     <ChevronRight size={14} />
                   </div>
                 </div>
               </div>
-
-              {/* Border accent */}
-              <div className="absolute inset-0 border border-[#A8894B]/20 pointer-events-none" />
             </div>
           ))}
         </div>
@@ -220,51 +217,51 @@ const PackagesSection = () => {
         open={!!selectedPackage}
         onOpenChange={() => setSelectedPackage(null)}
       >
-        <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto bg-[#0A0A0A] border border-[#A8894B]/20 text-[#FBF9F1]">
+        <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto bg-[#FAF7F2] border border-[#EDE4D6] text-[#2C1A0E] rounded-2xl">
           {selectedPackage && (
             <>
               <DialogHeader>
-                <DialogTitle className="font-display text-3xl text-[#FBF9F1] italic">
+                <DialogTitle className="font-display text-3xl text-[#2C1A0E]">
                   {selectedPackage.name}
                 </DialogTitle>
               </DialogHeader>
 
-              <div className="relative h-48 md:h-64 mb-6 overflow-hidden">
+              <div className="relative h-48 md:h-60 mb-5 overflow-hidden rounded-xl">
                 <img
                   src={selectedPackage.image}
                   alt={selectedPackage.name}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2]/80 to-transparent" />
               </div>
 
-              <div className="space-y-6">
-                <div className="flex flex-wrap items-center gap-4 text-sm text-[#FBF9F1]/70 font-body">
+              <div className="space-y-5">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-[#5C3A22] font-body">
                   <div className="flex items-center gap-2">
-                    <Clock size={16} className="text-[#A8894B]" />
+                    <Clock size={16} className="text-[#7A3218]" />
                     <span>{selectedPackage.time}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin size={16} className="text-[#A8894B]" />
+                    <MapPin size={16} className="text-[#7A3218]" />
                     <span>{selectedPackage.duration}</span>
                   </div>
                 </div>
 
-                <p className="text-sm text-[#FBF9F1]/80 font-body font-light leading-relaxed">
+                <p className="text-sm text-[#5C3A22] font-body font-light leading-relaxed">
                   {selectedPackage.description}
                 </p>
 
                 <div>
-                  <h4 className="text-sm font-body font-medium text-[#A8894B] tracking-wider mb-3">
+                  <h4 className="text-sm font-body font-medium text-[#7A3218] tracking-wider mb-3">
                     DESTINASI
                   </h4>
                   <ul className="space-y-2">
                     {selectedPackage.destinations.map((dest, i) => (
                       <li
                         key={i}
-                        className="text-sm text-[#FBF9F1]/70 font-body flex items-center gap-2"
+                        className="text-sm text-[#5C3A22] font-body flex items-center gap-2"
                       >
-                        <span className="w-1 h-1 rounded-full bg-[#A8894B]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#7A3218]" />
                         {dest}
                       </li>
                     ))}
@@ -272,29 +269,29 @@ const PackagesSection = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-body font-medium text-[#A8894B] tracking-wider mb-3">
+                  <h4 className="text-sm font-body font-medium text-[#7A3218] tracking-wider mb-3">
                     HIGHLIGHTS
                   </h4>
                   <ul className="space-y-2">
                     {selectedPackage.highlights.map((h, i) => (
                       <li
                         key={i}
-                        className="text-sm text-[#FBF9F1]/70 font-body flex items-center gap-2"
+                        className="text-sm text-[#5C3A22] font-body flex items-center gap-2"
                       >
-                        <span className="text-[#A8894B]">+</span>
+                        <span className="text-[#7A3218] font-medium">+</span>
                         {h}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-4 border-t border-[#A8894B]/20">
+                <div className="pt-4 border-t border-[#EDE4D6]">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs text-[#FBF9F1]/40 font-body">
+                      <p className="text-xs text-[#5C3A22]/50 font-body">
                         Harga per orang
                       </p>
-                      <p className="text-2xl font-display text-[#A8894B]">
+                      <p className="text-2xl font-display text-[#7A3218]">
                         {selectedPackage.price}
                       </p>
                     </div>
@@ -307,7 +304,7 @@ const PackagesSection = () => {
                             ?.scrollIntoView({ behavior: 'smooth' })
                         }, 300)
                       }}
-                      className="px-6 py-3 bg-[#A8894B] text-[#050401] text-sm tracking-wider font-body font-medium hover:bg-[#FBF9F1] transition-colors duration-300"
+                      className="px-6 py-2.5 bg-[#7A3218] text-white text-sm tracking-wider font-body font-medium rounded-lg hover:bg-[#5e2612] transition-colors duration-300"
                     >
                       BOOKING SEKARANG
                     </button>

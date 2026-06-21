@@ -4,45 +4,46 @@
 
 @layer base {
   :root {
-    --color-bg: #050401;
-    --color-text: #FBF9F1;
-    --color-accent: #A8894B;
-    --color-secondary: #0A0A0A;
-    --color-muted: rgba(251, 249, 241, 0.5);
+    --color-bg: #F5EFE4;
+    --color-surface: #FAF7F2;
+    --color-hover: #EDE4D6;
+    --color-primary: #7A3218;
+    --color-text: #2C1A0E;
+    --color-body: #5C3A22;
 
-    --background: 30 33% 2%;
-    --foreground: 45 38% 95%;
-    --card: 0 0% 4%;
-    --card-foreground: 45 38% 95%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 45 38% 95%;
-    --primary: 40 40% 47%;
-    --primary-foreground: 30 33% 2%;
-    --secondary: 0 0% 4%;
-    --secondary-foreground: 45 38% 95%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 45 10% 60%;
-    --accent: 40 40% 47%;
-    --accent-foreground: 30 33% 2%;
+    --background: 40 30% 92%;
+    --foreground: 24 50% 11%;
+    --card: 40 24% 96%;
+    --card-foreground: 24 50% 11%;
+    --popover: 40 24% 96%;
+    --popover-foreground: 24 50% 11%;
+    --primary: 16 67% 29%;
+    --primary-foreground: 40 30% 92%;
+    --secondary: 38 22% 88%;
+    --secondary-foreground: 24 50% 11%;
+    --muted: 38 22% 88%;
+    --muted-foreground: 22 30% 25%;
+    --accent: 16 67% 29%;
+    --accent-foreground: 40 30% 92%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 40% 47%;
-    --input: 0 0% 15%;
-    --ring: 40 40% 47%;
-    --radius: 0.5rem;
+    --border: 38 22% 88%;
+    --input: 38 22% 88%;
+    --ring: 16 67% 29%;
+    --radius: 0.75rem;
   }
 
   body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    background-color: #F5EFE4;
+    color: #2C1A0E;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     /* Firefox */
     scrollbar-width: thin;
-    scrollbar-color: rgba(168, 137, 75, 0.4) transparent;
+    scrollbar-color: rgba(122, 50, 24, 0.35) transparent;
   }
 
   /* Chrome, Edge, Safari */
@@ -55,19 +56,19 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(168, 137, 75, 0.35);
+    background: rgba(122, 50, 24, 0.3);
     border-radius: 9999px;
     transition: background 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(168, 137, 75, 0.75);
+    background: rgba(122, 50, 24, 0.65);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display SC', serif;
     font-weight: 400;
-    font-style: italic;
+    color: #2C1A0E;
   }
 }
 
@@ -111,7 +112,7 @@
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
-  background-color: #1a1a1a;
+  background-color: #EDE4D6;
 }
 
 .gallery-item__img {
@@ -207,7 +208,8 @@ html.lenis, html.lenis body {
 .package-card {
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(168, 137, 75, 0.2);
+  border: 1px solid rgba(122, 50, 24, 0.15);
+  border-radius: 1rem;
 }
 
 .package-card__img {
@@ -219,7 +221,7 @@ html.lenis, html.lenis body {
 }
 
 .package-card__overlay {
-  background: linear-gradient(to top, rgba(5,4,1,0.95) 0%, rgba(5,4,1,0.4) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(44,26,14,0.92) 0%, rgba(44,26,14,0.35) 50%, transparent 100%);
 }
 
 /* Phone mockup for QR section */

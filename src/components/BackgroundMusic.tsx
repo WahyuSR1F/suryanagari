@@ -78,8 +78,8 @@ const BackgroundMusic = () => {
         width: '3.5rem',     // sama dengan WA button (w-14)
         height: '3.5rem',
         borderRadius: '50%',
-        border: '1px solid rgba(168, 137, 75, 0.35)',
-        background: 'rgba(5, 4, 1, 0.80)',
+        border: '1px solid rgba(122, 50, 24, 0.25)',
+        background: 'rgba(250, 247, 242, 0.90)',
         backdropFilter: 'blur(12px)',
         display: 'flex',
         alignItems: 'center',
@@ -89,17 +89,17 @@ const BackgroundMusic = () => {
         transform: visible ? 'scale(1)' : 'scale(0.7)',
         transition: 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s',
         boxShadow: playing
-          ? '0 0 18px rgba(168, 137, 75, 0.35), 0 4px 16px rgba(0,0,0,0.5)'
-          : '0 4px 16px rgba(0,0,0,0.5)',
+          ? '0 0 18px rgba(122, 50, 24, 0.2), 0 4px 16px rgba(0,0,0,0.08)'
+          : '0 4px 16px rgba(0,0,0,0.08)',
       }}
       onMouseEnter={e => {
         const btn = e.currentTarget as HTMLButtonElement
-        btn.style.borderColor = 'rgba(168, 137, 75, 0.7)'
+        btn.style.borderColor = 'rgba(122, 50, 24, 0.5)'
         btn.style.transform = 'scale(1.1)'
       }}
       onMouseLeave={e => {
         const btn = e.currentTarget as HTMLButtonElement
-        btn.style.borderColor = 'rgba(168, 137, 75, 0.35)'
+        btn.style.borderColor = 'rgba(122, 50, 24, 0.25)'
         btn.style.transform = 'scale(1)'
       }}
     >
@@ -110,7 +110,7 @@ const BackgroundMusic = () => {
             position: 'absolute',
             inset: 0,
             borderRadius: '50%',
-            border: '1px solid rgba(168, 137, 75, 0.55)',
+            border: '1px solid rgba(122, 50, 24, 0.35)',
             animation: 'musicPulse 2s ease-out infinite',
             pointerEvents: 'none',
           }}
@@ -120,8 +120,8 @@ const BackgroundMusic = () => {
       {/* Icon */}
       {playing ? (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <rect x="6" y="4" width="4" height="16" rx="1" fill="#A8894B" />
-          <rect x="14" y="4" width="4" height="16" rx="1" fill="#A8894B" />
+          <rect x="6" y="4" width="4" height="16" rx="1" fill="#7A3218" />
+          <rect x="14" y="4" width="4" height="16" rx="1" fill="#7A3218" />
         </svg>
       ) : (
         <svg
@@ -129,7 +129,7 @@ const BackgroundMusic = () => {
           height="18"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="rgba(251,249,241,0.65)"
+          stroke="rgba(44,26,14,0.55)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

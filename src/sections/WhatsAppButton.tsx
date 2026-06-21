@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
         fill="white"
       />
       {/* Tooltip */}
-      <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#0A0A0A] border border-[#A8894B]/20 rounded text-xs text-[#FBF9F1] font-body whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#FAF7F2] border border-[#EDE4D6] rounded-lg text-xs text-[#2C1A0E] font-body whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-sm">
         Chat WhatsApp
       </span>
     </button>

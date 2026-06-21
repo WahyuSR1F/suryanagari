@@ -66,22 +66,22 @@ const BookingSection = () => {
     <section
       ref={sectionRef}
       id="booking"
-      className="relative py-24 md:py-40"
-      style={{ backgroundColor: '#050401' }}
+      className="relative py-24 md:py-36"
+      style={{ backgroundColor: '#F5EFE4' }}
     >
       <div className="max-w-[800px] mx-auto px-[5%]">
         {/* Header */}
         <div className="booking-header text-center mb-12 md:mb-16">
-          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-[rgba(251,249,241,0.5)] mb-6 font-body italic">
+          <p className="font-accent text-sm md:text-base italic text-[#7A3218]/70 mb-5 tracking-wide">
             Reservasi
           </p>
           <h2
-            className="font-display text-[#FBF9F1] leading-[1.2] mb-6"
+            className="font-display text-[#2C1A0E] leading-[1.2] mb-5"
             style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
           >
             Booking & Kontak
           </h2>
-          <p className="text-sm text-[#FBF9F1]/50 font-body font-light max-w-lg mx-auto">
+          <p className="text-sm text-[#5C3A22]/70 font-body font-light max-w-lg mx-auto">
             Isi formulir di bawah ini dan kami akan segera menghubungi Anda
             melalui WhatsApp untuk konfirmasi.
           </p>
@@ -95,7 +95,7 @@ const BookingSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Nama */}
             <div>
-              <label className="text-xs text-[#FBF9F1]/50 font-body tracking-wider mb-2 block">
+              <label className="text-xs text-[#5C3A22]/60 font-body tracking-wider mb-2 block font-medium">
                 NAMA LENGKAP
               </label>
               <Input
@@ -106,13 +106,13 @@ const BookingSection = () => {
                   setFormData({ ...formData, nama: e.target.value })
                 }
                 required
-                className="bg-[#0A0A0A] border-[#A8894B]/20 text-[#FBF9F1] placeholder:text-[#FBF9F1]/20 focus:border-[#A8894B] h-12"
+                className="bg-[#FAF7F2] border-[#EDE4D6] text-[#2C1A0E] placeholder:text-[#5C3A22]/30 focus:border-[#7A3218] focus:ring-[#7A3218]/20 h-12 rounded-lg"
               />
             </div>
 
             {/* Paket */}
             <div>
-              <label className="text-xs text-[#FBF9F1]/50 font-body tracking-wider mb-2 block">
+              <label className="text-xs text-[#5C3A22]/60 font-body tracking-wider mb-2 block font-medium">
                 PILIH PAKET
               </label>
               <Select
@@ -121,25 +121,25 @@ const BookingSection = () => {
                   setFormData({ ...formData, paket: value })
                 }
               >
-                <SelectTrigger className="bg-[#0A0A0A] border-[#A8894B]/20 text-[#FBF9F1] h-12">
+                <SelectTrigger className="bg-[#FAF7F2] border-[#EDE4D6] text-[#2C1A0E] h-12 rounded-lg">
                   <SelectValue placeholder="Pilih paket wisata" />
                 </SelectTrigger>
-                <SelectContent className="bg-[#0A0A0A] border-[#A8894B]/20">
+                <SelectContent className="bg-[#FAF7F2] border-[#EDE4D6] rounded-lg">
                   <SelectItem
                     value="Suryanagari"
-                    className="text-[#FBF9F1] focus:bg-[#A8894B]/20 focus:text-[#FBF9F1]"
+                    className="text-[#2C1A0E] focus:bg-[#EDE4D6] focus:text-[#2C1A0E]"
                   >
                     Paket Suryanagari (08.00-15.00)
                   </SelectItem>
                   <SelectItem
                     value="Sandyakala"
-                    className="text-[#FBF9F1] focus:bg-[#A8894B]/20 focus:text-[#FBF9F1]"
+                    className="text-[#2C1A0E] focus:bg-[#EDE4D6] focus:text-[#2C1A0E]"
                   >
                     Sandyakala (15.00-21.00)
                   </SelectItem>
                   <SelectItem
                     value="Candramawa"
-                    className="text-[#FBF9F1] focus:bg-[#A8894B]/20 focus:text-[#FBF9F1]"
+                    className="text-[#2C1A0E] focus:bg-[#EDE4D6] focus:text-[#2C1A0E]"
                   >
                     Candramawa (Purnama - 18 jam)
                   </SelectItem>
@@ -149,7 +149,7 @@ const BookingSection = () => {
 
             {/* Tanggal */}
             <div>
-              <label className="text-xs text-[#FBF9F1]/50 font-body tracking-wider mb-2 block">
+              <label className="text-xs text-[#5C3A22]/60 font-body tracking-wider mb-2 block font-medium">
                 TANGGAL
               </label>
               <div className="relative">
@@ -160,18 +160,18 @@ const BookingSection = () => {
                     setFormData({ ...formData, tanggal: e.target.value })
                   }
                   required
-                  className="bg-[#0A0A0A] border-[#A8894B]/20 text-[#FBF9F1] focus:border-[#A8894B] h-12 [color-scheme:dark]"
+                  className="bg-[#FAF7F2] border-[#EDE4D6] text-[#2C1A0E] focus:border-[#7A3218] focus:ring-[#7A3218]/20 h-12 rounded-lg [color-scheme:light]"
                 />
                 <Calendar
                   size={16}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#A8894B]/50 pointer-events-none"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#7A3218]/40 pointer-events-none"
                 />
               </div>
             </div>
 
             {/* Jumlah Orang */}
             <div>
-              <label className="text-xs text-[#FBF9F1]/50 font-body tracking-wider mb-2 block">
+              <label className="text-xs text-[#5C3A22]/60 font-body tracking-wider mb-2 block font-medium">
                 JUMLAH ORANG
               </label>
               <div className="relative">
@@ -184,11 +184,11 @@ const BookingSection = () => {
                     setFormData({ ...formData, jumlah: e.target.value })
                   }
                   required
-                  className="bg-[#0A0A0A] border-[#A8894B]/20 text-[#FBF9F1] placeholder:text-[#FBF9F1]/20 focus:border-[#A8894B] h-12"
+                  className="bg-[#FAF7F2] border-[#EDE4D6] text-[#2C1A0E] placeholder:text-[#5C3A22]/30 focus:border-[#7A3218] focus:ring-[#7A3218]/20 h-12 rounded-lg"
                 />
                 <Users
                   size={16}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#A8894B]/50 pointer-events-none"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#7A3218]/40 pointer-events-none"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ const BookingSection = () => {
 
           {/* Catatan */}
           <div>
-            <label className="text-xs text-[#FBF9F1]/50 font-body tracking-wider mb-2 block">
+            <label className="text-xs text-[#5C3A22]/60 font-body tracking-wider mb-2 block font-medium">
               CATATAN (OPSIONAL)
             </label>
             <Textarea
@@ -206,20 +206,20 @@ const BookingSection = () => {
                 setFormData({ ...formData, catatan: e.target.value })
               }
               rows={4}
-              className="bg-[#0A0A0A] border-[#A8894B]/20 text-[#FBF9F1] placeholder:text-[#FBF9F1]/20 focus:border-[#A8894B] resize-none"
+              className="bg-[#FAF7F2] border-[#EDE4D6] text-[#2C1A0E] placeholder:text-[#5C3A22]/30 focus:border-[#7A3218] focus:ring-[#7A3218]/20 resize-none rounded-lg"
             />
           </div>
 
           {/* Submit */}
           <button
             type="submit"
-            className="w-full py-4 bg-[#A8894B] text-[#050401] text-sm tracking-[0.15em] uppercase font-body font-medium hover:bg-[#FBF9F1] transition-colors duration-500 flex items-center justify-center gap-3"
+            className="w-full py-3.5 bg-[#7A3218] text-white text-sm tracking-[0.12em] uppercase font-body font-medium rounded-lg hover:bg-[#5e2612] transition-colors duration-400 flex items-center justify-center gap-3"
           >
             <Send size={16} />
             Booking via WhatsApp
           </button>
 
-          <p className="text-xs text-center text-[#FBF9F1]/30 font-body">
+          <p className="text-xs text-center text-[#5C3A22]/40 font-body">
             Dengan mengklik booking, Anda akan diarahkan ke WhatsApp untuk
             konfirmasi.
           </p>
