@@ -58,6 +58,17 @@ Musik ambient khas Nusantara (oleh Donkgedank) yang otomatis berjalan saat websi
 ### 💬 Tombol WhatsApp
 Tombol cepat di pojok kanan bawah untuk langsung menghubungi tim Suryanagari via WhatsApp.
 
+### 🏛️ Halaman Destinasi Khusus
+Website juga memiliki halaman khusus untuk masing-masing destinasi wisata yang menampilkan gambar dan cerita sejarahnya:
+- [/bajang-ratu](/bajang-ratu) — Candi Bajang Ratu
+- [/candi-brahu](/candi-brahu) — Candi Brahu
+- [/candi-tribuana](/candi-tribuana) — Candi Tribuana Tunggadewi
+- [/candi-kedaton](/candi-kedaton) — Candi Kedaton & Sumur Upas
+- [/gapura-wringin-lawang](/gapura-wringin-lawang) — Gapura Wringin Lawang
+- [/kampung-batik](/kampung-batik) — Kampung Batik Trowulan
+- [/kawasan-jatisumber](/kawasan-jatisumber) — Kawasan Jatisumber (Pohon Keramat)
+- [/sentra-patung](/sentra-patung) — Sentra Pembuatan Patung Trowulan
+
 ---
 
 ## 🚀 Cara Menjalankan Website (untuk Developer)

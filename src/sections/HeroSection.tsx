@@ -69,6 +69,9 @@ const HeroSection = () => {
               'radial-gradient(ellipse at center, rgba(44,26,14,0.25) 0%, rgba(44,26,14,0.55) 65%, rgba(44,26,14,0.85) 100%)',
           }}
         />
+
+        {/* Batik pattern overlay */}
+
       </div>
 
       {/* Content */}
@@ -76,34 +79,37 @@ const HeroSection = () => {
         ref={textRef}
         className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center max-w-2xl mx-auto"
       >
-        <p className="font-accent text-sm md:text-base italic text-white/50 mb-5 tracking-wider">
+        <p className="font-accent text-sm md:text-base italic text-white/50 mb-5 tracking-wider relative">
           Est. 2026 — Trowulan, Mojokerto
+          <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] bg-repeat-x h-1 w-full"></div>
         </p>
 
         <h1
-          className="font-display text-white leading-[1.15] mb-5"
+          className="font-display text-white leading-[1.15] mb-5 relative"
           style={{ fontSize: 'clamp(2.2rem, 7vw, 4.5rem)' }}
         >
           Rasakan Keagungan Majapahit
         </h1>
 
-        <p className="text-sm md:text-[15px] text-white/65 font-body font-light leading-relaxed mb-9 max-w-md">
+        <p className="text-sm md:text-[15px] text-white/65 font-body font-light leading-relaxed mb-9 max-w-md relative">
           Perjalanan sejarah, budaya, dan spiritual yang tak terlupakan di
           jantung Kerajaan Majapahit.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 relative">
           <button
             onClick={() => scrollTo('paket')}
-            className="px-7 py-2.5 bg-[#7A3218] text-white text-sm tracking-wider uppercase font-body font-medium rounded-lg hover:bg-[#5e2612] transition-colors duration-400"
+            className="px-7 py-2.5 bg-[#7A3218] text-white text-sm tracking-wider uppercase font-body font-medium rounded-lg hover:bg-[#5e2612] transition-colors duration-400 relative z-10"
           >
             Lihat Paket Wisata
+            <div className="absolute inset-0 rounded-lg border border-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPgo8L3N2Zz4K')] border-dashed opacity-20 pointer-events-none"></div>
           </button>
           <button
             onClick={() => scrollTo('tentang')}
-            className="px-7 py-2.5 border border-white/30 text-white text-sm tracking-wider uppercase font-body rounded-lg hover:border-white/60 hover:bg-white/5 transition-all duration-400"
+            className="px-7 py-2.5 border border-white/30 text-white text-sm tracking-wider uppercase font-body rounded-lg hover:border-white/60 hover:bg-white/5 transition-all duration-400 relative z-10"
           >
             Jelajahi
+            <div className="absolute inset-0 rounded-lg border border-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPgo8L3N2Zz4K')] border-dashed opacity-20 pointer-events-none"></div>
           </button>
         </div>
       </div>
@@ -111,12 +117,13 @@ const HeroSection = () => {
       {/* Scroll indicator */}
       <button
         onClick={() => scrollTo('tentang')}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator text-white/40 hover:text-white/70 transition-colors duration-300"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator text-white/40 hover:text-white/70 transition-colors duration-300 relative"
       >
         <ChevronDown size={26} />
+        <div className="absolute -inset-2 rounded-full border border-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjAuNSIvPgo8L3N2Zz4K')] border-dashed opacity-10 pointer-events-none"></div>
       </button>
     </section>
   )
 }
 
-export default HeroSection
+export default HeroSection;

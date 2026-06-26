@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { BookOpen, Trophy, CreditCard } from 'lucide-react'
+import { BookOpen, Trophy, CreditCard, Camera } from 'lucide-react'
+import CameraScanner from '../components/CameraScanner'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -85,6 +86,7 @@ const QRCodeSVG = ({ size = 160, fg = '#2C1A0E', bg = '#FAF7F2' }: { size?: numb
 const QRScanSection = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const scanLineRef = useRef<HTMLDivElement>(null)
+  const [showScanner, setShowScanner] = useState(false)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -172,8 +174,17 @@ const QRScanSection = () => {
             setiap destinasi untuk membuka kisah-kisah tersembunyi.
           </p>
         </div>
-
-        {/* Content */}
+        <button
+          onClick={() => setShowScanner(true)}
+          className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-[#7A3218] rounded-full flex items-center justify-center shadow-lg shadow-black/30 hover:scale-110 transition-transform duration-300 group"
+          aria-label="Scan QR Code"
+        >
+          <Camera size={24} className="text-white group-hover:scale-110 transition-transform" />
+          <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#FAF7F2] border border-[#EDE4D6] rounded-lg text-xs text-[#2C1A0E] font-body whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-sm">
+            Scan QR
+          </span>
+        </button>
+        {showScanner && <CameraScanner onClose={() => setShowScanner(false)} />}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Phone Mockup */}

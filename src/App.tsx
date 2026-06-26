@@ -14,7 +14,16 @@ import TestimonialsSection from './sections/TestimonialsSection'
 import BookingSection from './sections/BookingSection'
 import Footer from './sections/Footer'
 import WhatsAppButton from './sections/WhatsAppButton'
-import BackgroundMusic from './components/BackgroundMusic'
+
+import { Routes, Route } from 'react-router-dom'
+import BajangRatu from './pages/BajangRatu'
+import CandiBrahu from './pages/CandiBrahu'
+import CandiTribuana from './pages/CandiTribuana'
+import CandiKedaton from './pages/CandiKedaton'
+import GapuraWringinLawang from './pages/GapuraWringinLawang'
+import KampungBatik from './pages/KampungBatik'
+import KawasanJatisumber from './pages/KawasanJatisumber'
+import SentraPatung from './pages/SentraPatung'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -36,7 +45,7 @@ function App() {
       lenis.raf(time)
       requestAnimationFrame(scrollFn)
     }
-    requestAnimationFrame(scrollFn)
+    requestAnimationFrame(requestAnimationFrame ? scrollFn : () => {})
 
     return () => {
       lenis.destroy()
@@ -44,21 +53,32 @@ function App() {
   }, [])
 
   return (
-    <div className="relative" style={{ backgroundColor: '#F5EFE4' }}>
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <GallerySection />
-      <PackagesSection />
-      <ItinerarySection />
-      <QRScanSection />
-      <ActivitiesSection />
-      <TestimonialsSection />
-      <BookingSection />
-      <Footer />
-      <WhatsAppButton />
-      <BackgroundMusic />
-    </div>
+    <Routes>
+      <Route path="/" element={
+        <div className="relative" style={{ backgroundColor: '#F5EFE4' }}>
+          <Navigation />
+          <HeroSection />
+          <AboutSection />
+          <GallerySection />
+          <PackagesSection />
+          <ItinerarySection />
+          <QRScanSection />
+          <ActivitiesSection />
+          <TestimonialsSection />
+          <BookingSection />
+          <Footer />
+          <WhatsAppButton />
+        </div>
+      } />
+      <Route path="/bajang-ratu" element={<BajangRatu />} />
+      <Route path="/candi-brahu" element={<CandiBrahu />} />
+      <Route path="/candi-tribuana" element={<CandiTribuana />} />
+      <Route path="/candi-kedaton" element={<CandiKedaton />} />
+      <Route path="/gapura-wringin-lawang" element={<GapuraWringinLawang />} />
+      <Route path="/kampung-batik" element={<KampungBatik />} />
+      <Route path="/kawasan-jatisumber" element={<KawasanJatisumber />} />
+      <Route path="/sentra-patung" element={<SentraPatung />} />
+    </Routes>
   )
 }
 
