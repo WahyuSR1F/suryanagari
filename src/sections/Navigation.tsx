@@ -26,21 +26,20 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled
-        ? 'bg-[#FAF7F2] shadow-[0_1px_0_0_#EDE4D6]'
-        : 'bg-gradient-to-b from-black/40 to-transparent'
+        ? 'bg-[#FAF7F2]/95 backdrop-blur-md shadow-[0_1px_0_0_#EDE4D6]'
+        : 'bg-black/10 backdrop-blur-sm'
         }`}
     >
       <div className="max-w-[1200px] mx-auto px-[5%] py-3 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`font-display text-sm md:text-base tracking-[0.25em] font-medium transition-colors duration-300 ${scrolled ? 'text-[#2C1A0E] hover:text-[#7A3218]' : 'text-white hover:text-white/80'
+          className={`font-display text-sm md:text-base tracking-[0.25em] font-medium transition-colors duration-300 ${scrolled
+            ? 'text-[#2C1A0E] hover:text-[#7A3218]'
+            : 'text-white hover:text-white/80'
             } relative`}
         >
           MAJAVENT
-          {!scrolled && (
-            <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] bg-repeat-x h-1 w-full"></div>
-          )}
         </button>
 
         {/* Center links - desktop */}
@@ -51,11 +50,10 @@ const Navigation = () => {
               onClick={() => scrollTo(item.id)}
               className={`text-[11px] tracking-[0.18em] uppercase font-body transition-colors duration-300 relative ${scrolled
                 ? 'text-[#2C1A0E]/70 hover:text-[#7A3218]'
-                : 'text-white/60 hover:text-white'
+                : 'text-white/80 hover:text-white'
                 }`}
             >
               {item.label}
-              {scrolled}
             </button>
           ))}
         </div>
@@ -63,19 +61,18 @@ const Navigation = () => {
         {/* Booking button - desktop */}
         <button
           onClick={() => scrollTo('booking')}
-          className={`hidden md:inline-flex text-[11px] tracking-[0.15em] uppercase font-body font-medium px-5 py-2 rounded-lg transition-colors duration-300 relative ${scrolled
+          className={`hidden md:inline-flex text-[11px] tracking-[0.15em] uppercase font-body font-medium px-5 py-2 rounded-lg transition-colors duration-300 ${scrolled
             ? 'text-white bg-[#7A3218] hover:bg-[#5e2612]'
             : 'text-white bg-[#7A3218]/80 hover:bg-[#7A3218]'
             }`}
         >
           Booking
-
         </button>
 
         {/* Mobile booking button */}
         <button
           onClick={() => scrollTo('booking')}
-          className={`md:hidden text-[11px] tracking-[0.15em] uppercase font-body font-medium px-4 py-1.5 rounded-lg transition-colors duration-300 relative ${scrolled
+          className={`md:hidden text-[11px] tracking-[0.15em] uppercase font-body font-medium px-4 py-1.5 rounded-lg transition-colors duration-300 ${scrolled
             ? 'text-white bg-[#7A3218] hover:bg-[#5e2612]'
             : 'text-white bg-[#7A3218]/80 hover:bg-[#7A3218]'
             }`}
@@ -87,4 +84,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation;
+export default Navigation

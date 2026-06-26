@@ -81,7 +81,6 @@ const HeroSection = () => {
       >
         <p className="font-accent text-sm md:text-base italic text-white/50 mb-5 tracking-wider relative">
           Est. 2026 — Trowulan, Mojokerto
-          <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxwYXRoIGQ9Ik0wIDBMNDAgMTBMMjAgMjBMMC4wMDEgMTBaIE0wIDMwTDIwIDQwTDQwIDMwTDIwIDIwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+')] bg-repeat-x h-1 w-full"></div>
         </p>
 
         <h1
