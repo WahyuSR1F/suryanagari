@@ -59,7 +59,9 @@ const HeroSection = () => {
         <img
           src="/images/hero-bg.jpg"
           alt="Candi Bajang Ratu Trowulan"
-          className="w-full h-full object-cover"
+          // Object-position gerbang: desktop center, mobile dikunci ke 49% 45%
+          // (sudah dikonfirmasi pas lewat tuning).
+          className="w-full h-full object-cover object-center max-md:object-[49%_45%]"
         />
         {/* Dark overlay — softer */}
         <div
