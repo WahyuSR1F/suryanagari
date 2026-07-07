@@ -9,10 +9,10 @@ if (typeof window !== 'undefined') {
 }
 
 const paragraphs = [
-  "Situs Candi Kedaton dan Sumur Upas menyimpan salah satu misteri terbesar dari Kerajaan Majapahit. Tidak seperti candi-candi lain yang menjulang ke atas, struktur arkeologi di sini merupakan kompleks fondasi batu bata yang luas, lorong-lorong rahasia, dan struktur heksagonal kuno. Para ahli meyakini bahwa area ini dulunya adalah bagian sentral dari keraton atau keraton kedaton tempat tinggal keluarga kerajaan dan pusat administrasi kemaharajaan.",
-  "Keunikan arsitektur Candi Kedaton terletak pada sisa-sisa fondasinya yang berbentuk geometris presisi, menunjukkan tata kota (city planning) Majapahit yang sangat maju. Sistem drainase kuno yang ditemukan di area ini membuktikan tingginya tingkat rekayasa perairan, sebuah perpaduan antara kearifan lokal dan pengaruh teknis Hindu-Buddha dalam menjaga kebersihan dan kesucian kompleks istana.",
-  "Di tengah kompleks ini terdapat Sumur Upas. Dalam bahasa Jawa Kuno, 'upas' berarti racun. Menurut cerita rakyat dan legenda setempat, sumur ini memancarkan gas beracun (atau menyimpan air beracun) yang sengaja digunakan sebagai mekanisme pertahanan keraton. Konon, musuh atau penyusup yang mencoba masuk ke pusat keraton melalui jalur bawah tanah akan menemui ajalnya di sumur ini.",
-  "Selain berfungsi sebagai pertahanan, Sumur Upas juga memiliki dimensi spiritual. Dalam konsep tantrisme Hindu-Buddha, air (tirta) memainkan peran sentral. Sumur ini diduga terkait dengan ritual pembersihan pusaka (jamasan) atau ritual sakral para pemangku adat keraton sebelum menghadap raja. Kedalaman dan kegelapan sumur merepresentasikan dunia bawah (Bhurloka) tempat bersemayamnya kekuatan bumi.",
+  "Terletak di Dusun Kedaton, Desa Sentonorejo. Situs ini diperkirakan dibangun sekitar abad 13–14 dan menjadi bagian penting peninggalan Kerajaan Majapahit. Kompleksnya terdiri dari bangunan Candi Kedaton dan struktur Sumur Upas yg berbahan bata merah, dipugar oleh Balai Pelestarian Cagar Budaya Jawa Timur dari 1995 hingga 2003. Kini dilindungi bangunan cungkup.",
+  "Fakta Unik Penggalian arkeologi menemukan setidaknya 6 lapisan budaya berbeda, menunjukkan area ini berganti fungsi dari saluran air/kanal menjadi taman kerajaan (tamansari), lalu permukiman elite. Ditemukan pecahan keramik asing dari Cina dan Eropa, mata uang kepeng, liontin emas, hingga gelang perunggu bukti ini dulunya kawasan tertutup bagi bangsawan. Sumur Upas memang mengandung gas CO2, sehingga kini ditutup permanen dengan batu dan tak pernah dibuka lagi.",
+  "Di tengah kompleks ini terdapat Sumur Upas. Nama 'Upas' (racun) berasal dari cerita bahwa sumur ini adalah lorong rahasia pelarian raja saat diserang musuh, dan sengaja diberi nama menakutkan agar musuh tak berani mendekat.",
+  "Warga setempat percaya lorong ini menembus hingga ke Pantai Selatan (Laut Kidul). Situs ini diyakini memiliki dhanyang (penjaga gaib) berbentuk makhluk mirip kalajengking raksasa yang kadang menampakkan diri di lorong-lorong candi. Hari Jumat Legi dianggap waktu yang ramai dikunjungi peziarah maupun mereka yang melakukan ritual spiritual.",
   "Saat ini, kunjungan ke Candi Kedaton membawa wisatawan seolah meniti jejak-jejak reruntuhan istana kuno yang hilang ditelan bumi. Proyek ekskavasi masih terus berjalan, namun sisa fondasi dan dinding-dinding bata tua ini sudah cukup untuk menceritakan betapa megah dan terstrukturnya pusat peradaban Nusantara di masa keemasan Majapahit."
 ];
 
@@ -98,14 +98,14 @@ const CandiKedaton = () => {
         <div className="float-element-5 absolute top-1/5 right-1/4 w-44 h-44 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+CiAgPHBhdHRlcm4gaWQ9ImJhdGlrIiB3aWR0aD0iODAiIGhlaWdodD0iODAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgPHBhdGggZD0iTTQwIDBMODAgMjBWNDBMODAgNjBMMzIgODBIMDBGNDIgNjBIMjBMMCA0MFYyMEw0MCAweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxwYXRoIGQ9Ik0yMCAxMEw0MCAyMEw2MCAxMEw4MCAyMFY0MEw2MCA1MEw4MCA2MFY4MEw2MCA3MEw0MCA4MEwyMCA3MEwwIDgwVjYwTDAgNDBMMCAyMEwyMCAxMHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q0Qjg5NiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxwYXRoIGQ9Ik0yMCAzMEEyIDIgMCAwIDEgMjQgMzRBMiAyIDAgMCAxIDIwIDMwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxwYXRoIGQ9Ik02MCAzMEEyIDIgMCAwIDEgNjQgMzRBMiAyIDAgMCAxIDYwIDMwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxwYXRoIGQ9Ik0yMCA1MEEyIDIgMCAwIDEgMjQgNTRBMiAyIDAgMCAxIDIwIDUwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxwYXRoIGQ9Ik02MCA1MEEyIDIgMCAwIDEgNjQgNTRBMiAyIDAgMCAxIDYwIDUwWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8L3BhdHRlcm4+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNiYXRpaykiLz4KPC9zdmc+')]"></div>
         <div className="float-element-6 absolute bottom-1/4 left-1/3 w-36 h-36 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CiAgPHBhdHRlcm4gaWQ9ImJhdGlrMiIgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgIDxwYXRoIGQ9Ik0zMCAxMEw0NSAyMEwzMCAzMEwxNSAyMHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q0Qjg5NiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8cGF0aCBkPSJNMTUgNDVMNDAgNjBMMjUgNDVIMTV6IiBmaWxsPSJub25lIiBzdHJva2U9IiNENEI4OTYiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHBhdGggZD0iTTQ1IDQ1TDYwIDYwTDQ1IDQ1TDQ1IDM1eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDRCODk2IiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q0Qjg5NiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNENEI4OTYiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwvcGF0dGVybj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2JhdGlrMikiLz4KPC9zdmc+')]"></div>
       </div>
-      
+
       <CandiTemplate
         title="Candi Kedaton & Sumur Upas"
         images={images}
         paragraphs={paragraphs}
         timelineEvents={timelineEvents}
       />
-      
+
       {/* Footer with batik-inspired design - no animation */}
       <footer className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#D4B896] to-[#C5A880] text-white p-4 z-50 border-t-2 border-[#2C1A0E]/20">
         <div className="container mx-auto text-center">
